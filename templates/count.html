@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Word Count App</title>
+</head>
+<body>
+<h1>COUNT VALUE</h1>
+
+<a href="{% url 'home' %}"><h3>HOME</h3></a>
+<a href="{% url 'about' %}"><h3>ABOUT</h3></a>
+
+<h2>Received Text: {{fulltext}}</h2>
+<br />
+<h2>Received Text Count: {{count}}</h2>
+<br />
+<h2>
+    {%for word, counttotal in sortedwords%}
+        {{ word }}: {{ counttotal }}<br />
+    {%endfor%}
+</h2>
+</body>
+</html>
